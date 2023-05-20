@@ -1,8 +1,8 @@
 <template>
     <div>
         <ul class="navbar">
-            <li class="nav-item"><a href="/home">Home</a></li>
-            <li class="nav-item"><a href="/products">Products</a></li>
+            <li class="nav-item"> <nuxt-link to="/">Home</nuxt-link></li>
+            <li class="nav-item"> <nuxt-link to="/products">Products</nuxt-link></li>
           </ul>        
     </div>
 </template>

@@ -1,14 +1,25 @@
 <template>
     <div>
         <ul class="navbar">
-            <li class="nav-item"><a href="">Home</a></li>
-            <li class="nav-item"><a href="/products">Products</a></li>
+            <li class="nav-item"> <nuxt-link to="/">Home</nuxt-link></li>
+            <li class="nav-item"> <nuxt-link to="/products">Products</nuxt-link></li>
           </ul>        
+    </div>
+    <div class="grid-container">
+        <div class="grid-item" v-for="p in products"><nuxt-link :to="`/products/${p.id}}`">{{ p.title }}</nuxt-link></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
     </div>
 </template>
 
 <script setup>
+    definePageMeta(
+        {
+            layout: 'products'
+        }
+    )
 
+    const { data: products } = await useFetch('https://fakestoreapi.com/products')
 </script>
 
 <style  scoped>
@@ -41,4 +52,16 @@
     li.nav-item a:hover {
         background-color: #111;
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+        grid-gap: 20px; /* Gap between grid items */
+      }
+  
+      .grid-item {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+      }
 </style>
