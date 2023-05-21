@@ -55,13 +55,12 @@
 
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
-        grid-gap: 20px; /* Gap between grid items */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
       }
   
       .grid-item {
-        background-color: #f2f2f2;
-        padding: 20px;
+        padding: 50px;
         text-align: center;
       }
 </style>
