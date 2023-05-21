@@ -5,6 +5,9 @@
             <li class="nav-item"> <nuxt-link to="/products">Products</nuxt-link></li>
           </ul>        
     </div>
+    <div class="toCenter">
+        <div class="header">WELCOME TO FAKESTOREAPI</div>
+    </div>
 </template>
 
 <script setup>
@@ -12,6 +15,17 @@
 </script>
 
 <style  scoped>
+    .toCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .header {
+        font-size: 36px;
+        text-align: center;
+    }
 
     ul {
         display: flex;
