@@ -6,8 +6,8 @@
           </ul>        
     </div>
     <div class="grid grid-cols-3 gap-5 text-2xl text-center">
-        <div class="m-2 shadow hover:text-red-500 transition-colors duration-500" v-for="p in products">
-            <nuxt-link :to="`/products/${p.id}`">{{ p.title }}</nuxt-link>
+        <div class="m-2 shadow" v-for="p in products">
+            <ProductCard :product="p"/>
         </div>
     </div>
 </template>
