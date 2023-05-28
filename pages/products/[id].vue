@@ -1,5 +1,6 @@
 <template>
-    <div>        <p>{{ product.title }}</p>
+    <div>        
+        <p>{{ product.title }}</p>
         <p>{{ product.price }}</p>
         <p>{{ product.id }}</p>
     </div>
