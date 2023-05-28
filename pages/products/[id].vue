@@ -5,14 +5,17 @@
             <li class="text-white m-5 hover:text-red-500 transition-colors duration-500"> <nuxt-link to="/products">Products</nuxt-link></li>
           </ul>        
     </div>
-    <div class="m-28">    
-        <p class="text-5xl">{{ product.title }}</p>
+    <div class="m-28">
+        <ProductDetails :product="product"/>
+        <!-- <p class="text-5xl">{{ product.title }}</p>
         <p class="text-3xl">{{ product.price }}</p>
-        <p class="text-3xl">{{ product.id }}</p>
+        <p class="text-3xl">{{ product.id }}</p> -->
     </div>
 </template>
 
 <script setup>
+import ProductDetails from '~/components/ProductDetails.vue';
+
     const{ id } =  useRoute().params
     const uri = 'https://fakestoreapi.com/products/' + id
 
